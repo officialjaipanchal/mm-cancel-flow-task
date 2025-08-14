@@ -1,0 +1,1474 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Loading Styles */
+.flow-loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.flow-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.flow-loading-spinner {
+  margin-bottom: 1.5rem;
+  animation: spin 1.5s ease-in-out infinite;
+  filter: drop-shadow(0 4px 6px rgb(0 0 0 / 0.1));
+}
+
+.flow-loading-icon {
+  width: 3rem;
+  height: 3rem;
+  color: rgb(137 82 252);
+}
+
+.flow-loading-circle {
+  opacity: 0.25;
+}
+
+.flow-loading-path {
+  opacity: 0.75;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.flow-loading-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: rgb(17 24 39);
+  margin: 0 0 0.5rem 0;
+  line-height: 1.5;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.flow-loading-message {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  color: rgb(107 114 128);
+  margin: 0 0 1.5rem 0;
+  line-height: 1.5;
+  max-width: 300px;
+}
+
+.flow-loading-dots {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.flow-loading-dots span {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: rgb(137 82 252);
+  animation: loading-dots 1.4s ease-in-out infinite both;
+}
+
+.flow-loading-dots span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.flow-loading-dots span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+.flow-loading-dots span:nth-child(3) {
+  animation-delay: 0s;
+}
+
+@keyframes loading-dots {
+  0%, 80%, 100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Modal Overlay */
+.flow-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(255 255 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+/* Modal Container */
+.flow-modal {
+  background-color: rgb(255 255 255);
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  max-width: 1400px;
+  width: 95%;
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.flow-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-bottom: 1px solid rgb(229 231 235);
+}
+
+.flow-back-button {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  color: rgb(107 114 128);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease-in-out;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.flow-back-button-desktop {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  color: rgb(107 114 128);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease-in-out;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.flow-back-button:hover {
+  background-color: rgb(249 250 251);
+}
+
+.flow-back-button:focus {
+  outline: none;
+  background-color: rgb(249 250 251);
+}
+
+.flow-back-button-desktop:hover {
+  background-color: rgb(249 250 251);
+}
+
+.flow-back-button-desktop:focus {
+  outline: none;
+  background-color: rgb(249 250 251);
+}
+
+.flow-back-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.flow-back-icon-desktop {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.flow-modal-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: rgb(17 24 39);
+  margin: 0;
+}
+
+.flow-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.flow-progress-bars {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.flow-progress-bar {
+  width: 1.5rem;
+  height: 0.25rem;
+  background-color: rgb(229 231 235);
+  border-radius: 0.125rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.flow-progress-bar.active {
+  background-color: rgb(161, 164, 169);
+}
+
+.flow-progress-bar.completed {
+  background-color: rgb(34, 197, 94);
+}
+
+.flow-progress-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  color: rgb(107 114 128);
+  font-weight: 500;
+}
+
+.flow-close-button {
+  background: none;
+  border: none;
+  color: rgb(107 114 128);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease-in-out;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.flow-close-button:hover {
+  background-color: rgb(249 250 251);
+}
+
+.flow-close-button:focus {
+  outline: none;
+  background-color: rgb(249 250 251);
+}
+
+.flow-close-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.flow-mobile-divider {
+  display: none;
+}
+
+/* Content */
+.flow-modal-content {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.flow-form-section {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
+}
+
+.flow-form-content {
+  max-width: 700px;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+/* Greeting */
+.flow-greeting {
+  margin-bottom: 1.5rem;
+}
+
+.flow-greeting-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: rgb(17 24 39);
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+.flow-greeting-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: rgb(55 65 81);
+  margin: 0 0 2rem 0;
+  line-height: 1.5;
+}
+
+/* Offer Card */
+.flow-offer-card {
+  border: 1px solid rgb(147 51 234);
+  background-color: rgb(250 245 255);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.flow-offer-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(17 24 39);
+  margin: 0 0 1.5rem 0;
+  line-height: 1;
+}
+
+.flow-offer-highlight {
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.flow-offer-pricing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.flow-offer-price {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgb(147 51 234);
+}
+
+.flow-offer-original {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgb(223, 223, 223);
+  text-decoration: line-through;
+}
+
+.flow-offer-button {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: rgb(255 255 255);
+  background-color: rgb(34 197 94);
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-bottom: 1rem;
+}
+
+.flow-offer-button:hover {
+  background-color: rgb(22 163 74);
+}
+
+.flow-offer-disclaimer {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  color: rgb(107 114 128);
+  margin: 0;
+}
+
+/* Actions */
+.flow-actions {
+  display: flex;
+  flex-direction: column;
+}
+
+.flow-divider {
+  height: 1px;
+  background-color: rgb(229 231 235);
+  margin: 1rem 0;
+}
+
+.flow-no-thanks-button {
+  padding: 1rem 2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(55 65 81);
+  background-color: rgb(255 255 255);
+  border: 1px solid rgb(229 231 235);
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.flow-no-thanks-button:hover {
+  background-color: rgb(249 250 251);
+  border-color: rgb(209 213 219);
+}
+
+/* Job Card Styles */
+.flow-job-card {
+  background-color: rgb(255 255 255);
+  border: 1px solid rgb(229 231 235);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.flow-job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.flow-job-company-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1;
+}
+
+.flow-job-logo {
+  width: 3rem;
+  height: 3rem;
+  background-color: rgb(59 130 246);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.flow-job-logo-inner {
+  color: rgb(255 255 255);
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.flow-job-title-section {
+  flex: 1;
+}
+
+.flow-job-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(17 24 39);  
+}
+
+.flow-job-company {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  color: rgb(107 114 128);
+  margin: 0;
+}
+
+.flow-job-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.flow-job-tag {
+  border: 2px solid rgb(243 244 246);
+  color: rgb(55 65 81);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.375rem 0.75rem;
+  border-radius: 1rem;
+  white-space: nowrap;
+}
+
+.flow-job-salary-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgb(229 231 235);
+}
+
+  .flow-job-salary-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .flow-job-salary-left {
+    gap: 0.375rem;
+  }
+}
+
+.flow-job-status {
+  display: inline-block;
+  color:rgb(34 197 94); 
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  width: fit-content;
+  margin-bottom: 0.25rem;
+}
+
+.flow-job-salary {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: rgb(17 24 39);
+}
+
+.flow-job-visa {
+  text-align: right;
+  min-width: 200px;
+  flex-shrink: 0;
+  margin-top: 0;
+}
+
+.flow-job-visa-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgb(90, 94, 103);
+  margin: 0 0 0.75rem 0;
+}
+
+.flow-job-visa-stats {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.visa-pill {
+  background-color: rgb(243 244 246);
+  color: rgb(55 65 81);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.375rem 0.75rem;
+  border-radius: 1rem;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  position: relative;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.visa-icon {
+  font-size: 0.875rem;
+  line-height: 1;
+}
+
+.visa-text {
+  font-weight: 500;
+}
+
+.visa-badge {
+  border: 1px solid rgb(213, 215, 219);
+  background-color: rgb(255, 255, 255);
+  color: rgb(107 114 128);
+  font-size: 0.625rem;
+  font-weight: 600;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.75rem;
+  position: absolute;
+  top: -0.90rem;
+  right: -0.50rem;
+  min-width: 1.25rem;
+  text-align: center;
+}
+
+
+.flow-job-visa-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.flow-job-visa-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: rgb(34 197 94);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.flow-job-visa-label {
+  
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  color: rgb(55 65 81);
+  white-space: nowrap;
+}
+
+.flow-job-description {
+  margin-bottom: 1.25rem;
+}
+
+.flow-job-description p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  color: rgb(55 65 81);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.flow-job-contact {
+  font-size: 14px;
+  color: #4b4b4b;
+  flex: 1;
+}
+
+.flow-job-email {
+  color: #9b5de5;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.flow-job-email:hover {
+  text-decoration: underline;
+}
+
+.flow-job-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.flow-job-feedback-icon {
+  width: 23px;
+  height: 23px;
+  color: #94a3b8; /* slate-400 like in Tailwind */
+  flex-shrink: 0;
+  
+}
+
+
+.flow-job-action-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: rgb(107 114 128);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease-in-out;
+  flex-shrink: 0;
+}
+
+.flow-job-action-icon:hover {
+  background-color: rgb(249 250 251);
+}
+
+.flow-job-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.flow-job-save-button {
+  padding: 6px 14px;
+  border: 1px solid #c4a7ff;
+  border-radius: 6px;
+  background: transparent;
+  color: #9b5de5;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.flow-job-save-button:hover {
+  background: rgba(155, 93, 229, 0.08);
+}
+
+.flow-job-apply-button {
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: #9b5de5;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  margin-left: 0.5rem;
+}
+
+.flow-job-apply-button:hover {
+  background: #884fdc;
+}
+
+.flow-job-type {
+  background-color: #f3f4f6;
+  color: #374151;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+
+.visa-pill {
+  border: 1px solid rgb(213, 215, 219);
+  background-color: #ffffff;
+  color: #374151;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Subscription Details Styles */
+.flow-subscription-details {
+  margin-bottom: 1.5rem;
+}
+
+.flow-subscription-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: rgb(55 65 81);
+  margin: 0 0 0.75rem 0;
+  line-height: 1.5;
+}
+
+.flow-subscription-disclaimer {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  color: rgb(156 163 175);
+  margin: 0;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* Highlight Styles */
+.flow-highlight {
+  color: rgb(147 51 234);
+  font-weight: 600;
+}
+
+/* Finish Button */
+.flow-finish-button {
+  width: 100%;
+  padding: 0.8rem 2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: rgb(255 255 255);
+  background-color: rgb(147 51 234);
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.flow-finish-button:hover {
+  background-color: rgb(126 34 206);
+}
+
+/* Step 2 Styles */
+.flow-error-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  color: rgb(239 68 68);
+  margin: 0.5rem 0 0 0;
+  line-height: 1.5;
+}
+
+.flow-error-text p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.flow-error-text p:first-child {
+  margin-bottom: 0.25rem;
+}
+
+.flow-question-section {
+  margin-bottom: 2rem;
+}
+
+.flow-question-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(17 24 39);
+  margin: 0 0 1rem 0;
+  line-height: 1.4;
+}
+
+.flow-answer-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  width: 100%; /* fill the parent width */
+  justify-content: space-between; 
+}
+
+.flow-answer-option {
+  flex: 1;                /* grow to fill space */
+  min-width: 4.5rem; 
+  padding: 0.75rem 1.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgb(55 65 81);
+  background-color: rgb(255 255 255);
+  border: 1px solid rgb(229 231 235);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  min-width: 4rem;
+  text-align: center;
+}
+
+.flow-answer-option:hover {
+  background-color: rgb(249 250 251);
+  border-color: rgb(209 213 219);
+}
+
+.flow-answer-option-selected {
+  background-color: rgb(147 51 234);
+  color: rgb(255 255 255);
+  border-color: rgb(147 51 234);
+}
+
+.flow-answer-option-selected:hover {
+  background-color: rgb(126 34 206);
+  border-color: rgb(126 34 206);
+}
+
+
+
+.flow-offer-button {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: rgb(255 255 255);
+  background-color: rgb(34 197 94);
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.flow-offer-button:hover {
+  background-color: rgb(22 163 74);
+}
+
+.flow-continue-button {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: rgb(156 163 175);
+  background-color: rgb(243 244 246);
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.flow-continue-button-active {
+  color: rgb(255 255 255);
+  background-color: rgb(239 68 68);
+  cursor: pointer;
+}
+
+.flow-continue-button-active:hover {
+  background-color: rgb(220 38 38);
+}
+
+/* Step 3 Styles */
+.flow-radio-section {
+  margin-bottom: 2rem;
+}
+
+.flow-radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  background-color: rgb(255 255 255);
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+
+
+.flow-radio-input {
+  width: 1.25rem;
+  height: 1.25rem;
+  accent-color: rgb(147 51 234);
+  cursor: pointer;
+}
+
+.flow-radio-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(17 24 39);
+  cursor: pointer;
+  flex: 1;
+}
+
+.flow-change-option-button {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgb(147 51 234);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease-in-out;
+  margin-left: auto;
+}
+
+.flow-change-option-button:hover {
+  background-color: rgb(250 245 255);
+}
+
+.flow-complete-button {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: rgb(55 65 81);
+  background-color: rgb(243 244 246);
+  border: 1px solid rgb(229 231 235);
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.flow-complete-button:hover {
+  background-color: rgb(229 231 235);
+  border-color: rgb(209 213 219);
+}
+
+/* Follow-up Section Styles */
+.flow-followup-section {
+  margin-bottom: 2rem;
+}
+
+.flow-followup-question {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(17 24 39);
+  margin: 0 0 1rem 0;
+  line-height: 1.4;
+}
+
+.flow-textarea-container {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.flow-textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  color: rgb(17 24 39);
+  background-color: rgb(255 255 255);
+  border: 1px solid rgb(229 231 235);
+  border-radius: 0.5rem;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.flow-textarea:focus {
+  border-color: rgb(147 51 234);
+}
+
+.flow-textarea::placeholder {
+  color: rgb(156 163 175);
+}
+
+.flow-character-count {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  color: rgb(107 114 128);
+  background-color: rgb(255 255 255);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.flow-price-input-container {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.flow-price-symbol {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(107 114 128);
+  z-index: 1;
+}
+
+.flow-price-input {
+  width: 100%;
+  padding: 1rem 1rem 1rem 2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(17 24 39);
+  background-color: rgb(255 255 255);
+  border: 1px solid rgb(229 231 235);
+  border-radius: 0.5rem;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.flow-price-input:focus {
+  border-color: rgb(147 51 234);
+}
+
+.flow-price-input::placeholder {
+  color: rgb(156 163 175);
+}
+
+/* Completion Header */
+.flow-completion-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.flow-completion-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.flow-completion-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(17 24 39);
+}
+
+.flow-completion-title-desktop {
+  display: inline;
+}
+
+.flow-completion-title-mobile {
+  display: none;
+}
+
+.flow-completion-divider {
+  display: none;
+  height: 1px;
+  background-color: rgb(229 231 235);
+  margin: 0.5rem 0;
+  width: auto;
+}
+
+.flow-completion-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Image Section */
+.flow-image-section {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.flow-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .flow-modal-overlay {
+    padding: 0;
+    align-items: flex-start;
+  }
+
+  .flow-modal {
+    max-width: 100vw;
+    width: 100%;
+    border-radius: 20px;
+    margin-top: auto;
+  }
+  
+  .flow-modal-content {
+    flex-direction: column;
+    display: flex;
+    height: calc(100vh - 200px);
+    overflow: hidden;
+  }
+  
+  .flow-image-section {
+    display: block;
+    order: -1;
+    padding: 0;
+    margin: 1rem;
+  }
+  
+  .flow-image-section-step1 {
+    display: none;
+  }
+  
+  .flow-image-section-step2 {
+    display: none;
+  }
+  
+  .flow-image-section-step3 {
+    display: none;
+  }
+  
+  .flow-hero-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+  
+  .flow-form-section {
+    padding: 1.5rem;
+    width: 100%;
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .flow-form-content {
+    max-width: none;
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 1rem;
+  }
+  
+  .flow-actions {
+    position: sticky;
+    bottom: 0;
+    background-color: rgb(255 255 255);
+    padding: 1rem 0;
+    margin-top: auto;
+    border-top: 1px solid rgb(229 231 235);
+  }
+  
+  .flow-greeting-title {
+    font-size: 1.5rem;
+  }
+  
+  .flow-job-title {
+    font-size: 1.25rem;
+  }
+  
+  .flow-modal-header {
+    padding: 1rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    border-bottom: none;
+  }
+  
+  .flow-modal-title {
+    font-size: 1rem;
+    text-align: left;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    order: 1;
+  }
+  
+  .flow-progress {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 0;
+  }
+  
+  .flow-back-button {
+    display: flex;
+    margin-top: 0.5rem;
+    margin-left: 0.3rem;
+  }
+  
+  .flow-back-button-desktop {
+    display: none;
+  }
+  
+  .flow-mobile-divider {
+    display: block;
+    height: 1px;
+    background-color: rgb(229 231 235);
+    margin: 0.5rem 0;
+  }
+  
+  .flow-close-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+  }
+  
+
+  
+  .flow-job-salary-section {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .flow-job-visa {
+    text-align: left;
+    min-width: auto;
+  }
+  
+  .flow-job-visa-stats {
+    align-items: flex-start;
+  }
+  
+  /* Completion screen responsive */
+  .flow-completion-header {
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .flow-completion-center {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    align-items: flex-start;
+  }
+  
+  .flow-completion-title {
+    font-size: 0.875rem;
+  }
+  
+  .flow-completion-title-desktop {
+    display: none;
+  }
+  
+  .flow-completion-title-mobile {
+    display: inline;
+    margin-bottom: 1.5rem;
+  }
+  
+  .flow-completion-divider {
+    display: block;
+    margin-top: 1rem;
+    width: 100vw;
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+  
+  .flow-completion-progress {
+    gap: 0.25rem;
+  }
+  
+  /* All screens responsive - progress indicators */
+  .flow-progress {
+    gap: 0.25rem;
+  }
+  
+  .flow-progress-bars {
+    gap: 0.125rem;
+    margin-left: 0;
+  }
+  
+  .flow-progress-bar {
+    width: 1rem;
+  }
+  
+  .flow-progress-text {
+    font-size: 0.75rem;
+    margin-left: 0;
+  }
+  
+  .flow-progress-bar {
+    width: 1.25rem;
+    height: 0.2rem;
+  }
+  
+  /* Step 2 responsive */
+  .flow-answer-options {
+    gap: 0.5rem;
+  }
+  
+  .flow-answer-option {
+    padding: 0.625rem 1rem;
+    font-size: 0.75rem;
+  }
+  
+  /* Step 3 responsive */
+  .flow-radio-option {
+    padding: 0.75rem;
+  }
+  
+  .flow-textarea {
+    min-height: 100px;
+  }
+  
+  .flow-price-input {
+    padding: 0.75rem 0.75rem 0.75rem 1.5rem;
+  }
+  
+  /* Job card responsive */
+  .flow-job-card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .flow-job-header {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+  
+  .flow-job-company-section {
+    width: 100%;
+  }
+  
+  .flow-job-title {
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+  
+  .flow-job-company {
+    font-size: 0.8rem;
+  }
+  
+  .flow-job-tags {
+    justify-content: flex-start;
+    gap: 0.375rem;
+  }
+  
+  .flow-job-tag {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .flow-job-salary-section {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+  
+  .flow-job-visa {
+    text-align: left;
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .flow-job-visa-stats {
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.375rem;
+  }
+  
+  .flow-job-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+  }
+  
+  .flow-job-contact {
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .flow-job-feedback-icon {
+    display: none;
+  }
+  
+  .flow-job-save-button,
+  .flow-job-apply-button {
+    margin-left: 0;
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+  }
+  
+  .visa-pill {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.75rem;
+  }
+  
+  .visa-badge {
+    font-size: 0.625rem;
+    padding: 0.125rem 0.375rem;
+    min-width: 1.25rem;
+  }
+}
