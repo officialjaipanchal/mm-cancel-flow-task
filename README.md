@@ -1,4 +1,4 @@
-<img width="449" height="982" alt="image" src="https://github.com/user-attachments/assets/4567ccee-7274-4310-9124-0ef9a2f4a74c" /><img width="1915" height="1034" alt="image" src="https://github.com/user-attachments/assets/ceb28958-a9cb-476b-8d68-185e7769809a" /><img width="1915" height="1034" alt="image" src="https://github.com/user-attachments/assets/c29cf502-1bf5-4668-a0e4-4ce5ac5069cc" /># Subscription Cancellation Flow
+# Subscription Cancellation Flow
 
 A comprehensive subscription cancellation flow with A/B testing, dynamic pricing, and data persistence.
 
@@ -10,6 +10,10 @@ A comprehensive subscription cancellation flow with A/B testing, dynamic pricing
 <img width="1915" height="1034" alt="image" src="https://github.com/user-attachments/assets/7b6d10c1-071f-412e-874e-d0dfe20bc246" />
 <img width="1915" height="1034" alt="image" src="https://github.com/user-attachments/assets/dd3ac241-4821-4e8c-8211-437c3c042b09" />
 <img width="1915" height="1034" alt="image" src="https://github.com/user-attachments/assets/5973813a-086b-4063-bb63-b2a169f9a6c3" />
+<img width="449" height="982" alt="image" src="https://github.com/user-attachments/assets/4567ccee-7274-4310-9124-0ef9a2f4a74c" />
+<img width="1915" height="1034" alt="image" src="https://github.com/user-attachments/assets/ceb28958-a9cb-476b-8d68-185e7769809a" />
+<img width="1915" height="1034" alt="image" src="https://github.com/user-attachments/assets/c29cf502-1bf5-4668-a0e4-4ce5ac5069cc" />
+
 <img width="827" height="390" alt="image" src="https://github.com/user-attachments/assets/77cfd4ac-fcab-481a-ae8b-096c9a39bdd3" />
 <img width="1917" height="978" alt="image" src="https://github.com/user-attachments/assets/b8536272-97eb-448a-92ba-ada5af751a94" />
 <img width="1917" height="978" alt="image" src="https://github.com/user-attachments/assets/9b41e01b-67d6-4e67-ad98-329ba3b16b38" />
