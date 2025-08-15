@@ -7,11 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-<<<<<<< HEAD
-    "db:init": "PGPASSWORD=postgres psql -h localhost -p 54322 -U postgres -d postgres -f schema.sql"
-=======
+
     "db:init": "PGPASSWORD=postgres psql -h localhost -p 54322 -U postgres -d postgres -f seed.sql"
->>>>>>> 378bab3 (Final Commit)
+
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.50.5",
