@@ -1,4 +1,3 @@
--- database.sql
 -- Complete database schema and seed data for subscription cancellation flow
 -- This file contains everything needed to set up the database from scratch
 
